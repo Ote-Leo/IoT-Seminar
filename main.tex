@@ -1,9 +1,12 @@
-\documentclass[11pt, a4paper]{report}
+\documentclass[11pt, a4paper, english]{report}
 
 \usepackage[utf8]{inputenc}
-\usepackage{blindtext}
 \usepackage{graphicx}
 \usepackage{amsmath, amsfonts}
+\usepackage{babel}
+
+\usepackage{blindtext}
+\usepackage[x11names]{xcolor}
 
 \title{Localization and Human Mobility}
 \author{Omar Tareq El-Sebaey \\ 43-11815 \and Ahmed Ashraf Mohamed \\ 34-14498}
@@ -17,4 +20,8 @@
         \end{abstract}
         \tableofcontents
     \end{titlepage}
+    
+    \include{inroduction.tex}
+    \include{outdoor_localization.tex}
+    \include{indoor_localization.tex}
 \end{document}
