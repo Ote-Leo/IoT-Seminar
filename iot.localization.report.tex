@@ -13,23 +13,8 @@
 \author{Omar Tareq El-Sebaey \\ 43-11815 \and Ahmed Ashraf Ahmed Mohamed \\ 34-14498}
 \date{German University in Cairo (GUC) \\ \today}
 
-% Acronyms List
-\DeclareAcronym{gps}{short=GPS, long=Global Positioning System}
-\DeclareAcronym{ap}{short=AP, long=Access Point}
-\DeclareAcronym{aps}{short=APs, long=Access Points}
-\DeclareAcronym{rp}{short=RP, long=Reference Point}
-\DeclareAcronym{ss}{short=SS, long=Signal Strengths}
-\DeclareAcronym{mu}{short=MU, long=Mobile User}
-\DeclareAcronym{bs}{short=BS, long=Base Stations}
-\DeclareAcronym{dfnn}{short=DFNN, long=Deep Feed-Forward Neural Network}
-\DeclareAcronym{ue}{short=UE, long=User Equipment}
-\DeclareAcronym{los}{short=LoS, long=Line-of-Sight}
-\DeclareAcronym{lte}{short=LTE, long=Long-Term Evaluation}
-\DeclareAcronym{rs}{short=RS, long=Received Signal}
-\DeclareAcronym{rss}{short=RSS, long=Received Signal Strength}
-\DeclareAcronym{rssi}{short=RSSI, long=Received Signal Strength Indedicator}
+\input{chapters/acronyms.tex}
 
-% Beginning of the document
 \begin{document}
 \pagenumbering{Roman}
 \begin{titlepage}
@@ -46,6 +31,8 @@
 \include{chapters/indoor.localization.tex}
 
 \pagenumbering{Alph}
+\listoffigures
+\listoftables
 \printacronyms[pages={display=all,seq/use=false}]
 \bibliographystyle{plain}
 \bibliography{refrences}
