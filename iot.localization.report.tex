@@ -6,8 +6,8 @@
 \usepackage{babel}
 \usepackage{acro}
 
-\usepackage{blindtext}
-\usepackage[x11names]{xcolor}
+% \usepackage{blindtext}
+% \usepackage[x11names]{xcolor}
 
 \title{Localization and Human Mobility}
 \author{Omar Tareq El-Sebaey \\ 43-11815 \and Ahmed Ashraf Ahmed Mohamed \\ 34-14498}
@@ -19,9 +19,7 @@
 \pagenumbering{Roman}
 \begin{titlepage}
     \maketitle
-    \begin{abstract}
-        \textcolor{red}{\blindtext[1]}
-    \end{abstract}
+    \include{chapters/abstract.tex}
     \tableofcontents
 \end{titlepage}
 
@@ -29,6 +27,7 @@
 \include{chapters/inroduction.tex}
 \include{chapters/outdoor.localization.tex}
 \include{chapters/indoor.localization.tex}
+\include{chapters/conclusion.tex}
 
 \pagenumbering{Alph}
 \listoffigures
