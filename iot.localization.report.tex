@@ -29,7 +29,9 @@
 \DeclareAcronym{rss}{short=RSS, long=Received Signal Strength}
 \DeclareAcronym{rssi}{short=RSSI, long=Received Signal Strength Indedicator}
 
+% Beginning of the document
 \begin{document}
+\pagenumbering{Roman}
 \begin{titlepage}
     \maketitle
     \begin{abstract}
@@ -38,10 +40,12 @@
     \tableofcontents
 \end{titlepage}
 
+\pagenumbering{arabic}
 \include{chapters/inroduction.tex}
 \include{chapters/outdoor.localization.tex}
 \include{chapters/indoor.localization.tex}
 
+\pagenumbering{Alph}
 \printacronyms[pages={display=all,seq/use=false}]
 \bibliographystyle{plain}
 \bibliography{refrences}
