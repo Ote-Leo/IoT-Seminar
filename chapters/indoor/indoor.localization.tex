@@ -1,0 +1,132 @@
+\chapter{Indoor Localization}
+
+Localization within interior contexts such as supermarkets, airports, railway stations, and hospitals has become inevitable with the rise of the \ac{iot}.
+In grocery stores, customers can choose a cart equipped with a \ac{pda} screen equipped \ac{rfid} tags;
+the cart's location is identified using a hybrid \ac{wifi} and \ac{rfid} system;
+and once the customer wants to find the location of a product, they can browse through the \ac{pda} screen, and the directions to the target are provided\cite{kourouthanassis2001last}.
+Rather than handing out pamphlets to tourists at museums around the glob, roaming tourists may be managed by a Bluetooth and \ac{wifi}-enabled gadget.
+The gadget then directs visitors to a specific area of the gallery and provide information of an artefact.
+
+Bluetooth beacons can lead students to the locations of books in libraries.
+The student might use a mobile device to access his position to the network and recommend him.
+The precision of the position is within meters, ensuring that the scholar is close to the relevant book shelf\cite{hahn2017indoor}.
+It is crucial in clinical institutions to supervise some patients' movements, primarily those suffering from mental impairments such as Alzheimer's; \ac{rfid} technology can help with this\cite{calderoni2015indoor}.
+\Ac{rfid} tags may also be implanted on various areas of the body, allowing patients who require home-healthcare to know if they are sitting, sleeping, walking, standing, or collapsing, which demands close monitoring and prompt response\cite{shuaieb2020rfid}.
+
+\section{Localization Systems Technologies}
+
+\subsection{Satellite-Based Navigation}
+The most widely used technology for outdoor localization is the \ac{gps}.
+It does, however, necessitate \acf{los} between the satellites and the handset.
+As a consequence, primarily caused by external walls of the building, it has become ineffective for interior location-based service.
+The \ac{gps} may be used as the front-end of an \ac{gps} receiver by utilizing a steerable, high gain directional antenna.
+Pseudolites (i.e., pseudo satellites) are deployed as independent localization systems in areas where \ac{gps} signals cannot be received;
+these systems are comprised of pseudolites, transmitter and receiver antennas, target receivers, and reference.
+The basic idea is to receive the \ac{gps} signal and rebroadcast it via indoor transmitters\cite{xu2015new}.
+
+\subsection{\acf{ins}}
+\ac{imu} such as accelerometers and gyroscopes are used in \ac{ins}s to define the location and directional movement of an item to an initial location, velocity, and angle.
+\ac{ins} is recognized by its precision and resource utilization given that the inertial sensor is mounted to the surface of the object.
+However, \ac{ins} may become vulnerable to distortion, necessitating the use of specialized filtering systems such as the Kalman filter\cite{hu2020improving}.
+Another disadvantage of employing \ac{ins} is the expense and effort required to build the location sensor's network infrastructure.
+A unique initial location estimation approach has been proposed in \cite{chen2016smartphone} by integrating current \ac{wifi} routers and iBeacons.
+
+\subsection{Magnetic Based Navigation}
+At low altitudes, magnetic-based technologies are used for localization.
+A magnetic sensor receives the radiated fields from at least three reference magnetic stations, and the sensor's placement is computed via trilateration.
+At low frequencies, this technique is accurate;
+nonetheless, it is sensitive to conductive and ferromagnetic materials.
+Magnetic-based navigation systems often rely on disruptions in the Earth's magnetic field within surroundings;
+these disturbances arise owing to the ferromagnetic nature of metal structures within buildings\cite{shu2015magicol}.
+
+Magnetic maps are developed by measuring the magnetic magnetic field at known places;
+these maps can estimate the position of an unknown target based on its magnetic measurement.
+This method is known as magnetic fingerprinting.
+Magnetic interference, on the other hand, might be severe and produce localization issues.
+Using multiple handsets along the same routes may result in different magnetic readings being recorded.
+The authors of \cite{lee2018amid} investigated localization using deep learning;
+accuracy was determined to be $0.8 m$ in corridors and $2.3 m$ in the atrium.
+Cameras and magnetic fields are integrated with neural networks to improve localization when the phone is upright;
+their proposed techniques \cite{liu2016fusion} achieved more than 91\% percent accuracy increase of $1.34 m$.
+
+\subsection{\acf{rf} Based Navigation}
+The most widely used techniques for localization are those based on radio frequencies.
+It is advocated since it covers a larger territory with low-cost gear.
+This is reinforced by the fact that \ac{rf} waves can permeate solids such as walls and human bodies.
+\ac{rf}-based navigation technologies outperform alternative localization techniques such as infrared and ultrasonic navigation systems.
+These systems, however, should be avoided in hospitals and aircraft since they may conflict with current \ac{rf} systems.
+
+Since the radio frequency is less than $300 GHz$, wireless technologies employed for interior localization can be classified.
+At the same time, the frequency of wireless technology determines its capabilities such as coverage, wall penetration, and resistance to barriers.
+Thus, there are three primary categories of wireless technology for diverse applications: long-distance, medium-distance, and short-distance technology.
+
+In a \acf{wsn}, node position information is critical for several functions such as routing, clustering, and context-based applications.
+\ac{wsn} is described as a network of nodes that detect the environment's fields and wirelessly communicate the acquired data\cite{reichenbach2006indoor}.
+These details are sent to the sink node, which is used to gather data.
+In \ac{wsn}, knowledge about the position of nodes is vital since observations lacking position information are pointless.
+
+An examples of localization in \ac{wsn} is demonstrated using \ac{rssi} based on the ZigBee standard\cite{mankong20205}.
+\ac{wsn} may employ both range-based and free-range for localization\cite{munadhil2020neural}.
+It is further classified as accurate (lateration, trilateration) and approximate.
+\ac{wifi}, Bluetooth, ZigBee, \acf{uwb}, and \acf{rfid} are a few examples of \ac{rf}-based navigation systems.
+
+\subsubsection{\ac{wifi} Technology}
+Most large communal environments, such as colleges or business buildings, have already deployed \ac{wifi} hotspots that offer network access point coverage throughout the building.
+\ac{wifi} technology is used in a variety of devices, including personal computers, video game consoles, cellphones, digital cameras, tablet computers, and digital music players.
+That infrastructure cost may be quite minimal, and \ac{wifi} has expanded from a reception range of roughly $100 m$ to about $1 km$.
+Furthermore, \ac{wifi} localization based on fingerprinting \ac{rss} might be used in conjunction with other \ac{rf} localization methods, such as \ac{rfid}\cite{wang2016indoor}.
+\ac{wifi} covers a larger area than Bluetooth and has a higher throughput, making it more practical to use.
+% TODO: find the citation for HORUS and COMPASS
+RADAR\cite{bahl2000radar}, HORUS\cite{bahl2000radar}, and COMPASS\cite{bahl2000radar} are examples of commercial \ac{wifi}-based navigation systems.
+
+\subsubsection{ZigBee}
+ZigBee is an IEEE 802.15.4 standard-based specification.
+It operates in the $868 MHz$ band in Europe, the $915 MHz$ band in the United States and Australia, and the $2.4 GHz$ spectrum in other locations.
+ZigBee is a wireless mesh network protocol that allows for long-distance communication between devices.
+When compared to \ac{wifi} standards, it has a low cost, a modest data transmission rate, and a short latency time.
+The \ac{rss} technique is used by the technology to quantify the distance between two or more ZigBee sensor devices\cite{sugano2006indoor}.
+The scanning of \ac{ap}s via the \ac{wifi} interface consumes a lot of electricity.
+To mitigate this impact, the author in \cite{niu2015zil} proposed ZIL, an energy-efficient indoor localization utilizing ZigBee in which the ZigBee interface is utilized to gather \ac{wifi} signals.
+
+\subsubsection{Bluetooth}
+Bluetooth is created to encourage devices to communicate wirelessly across short distances.
+Bluetooth uses radio waves with frequencies ranging from $2.402 GHz$ to $2.480 GHz$ to communicate.
+If it has qualities such as low transmission power, battery life, secure and efficient communications, and an easily accessible solution.
+The new \ac{ble} can cover a range of $70-100 m$ and offer $24Mbps$ while using less power\cite{zafari2019survey}.
+As a result, Bluetooth is unsuitable for large-area localization.
+Using the \ac{rss} trained \ac{nn} trained in \cite{Altini2010BluetoothIL}, and they may be used to detect user location based on online \ac{rss} measurements.
+
+\subsubsection{\acf{rfid}}
+\acf{rfid} systems rely on \ac{rfid} tags' back-scattering communication, as well as \ac{rfid} readers and middleware to process the signal created between the tags and the readers\cite{tesoriero2010improving}.
+\ac{rfid} tags are classified as either active, passive, or semi-active.
+Active \ac{rfid} tags have a built-in battery included within their electronics.
+Active \ac{rfid}s operate at \ac{uhf} and \ac{shf}, with detection spans of $100 m$.
+Consequently, active \ac{rfid} may be used for long-range localization and object tracking\cite{deak2012survey}.
+Active \ac{rfid} technology, on the other hand, is unreliable for sub-meter localization precision and is not widely available on most portable user devices.
+Passive tags lack internal batteries and instead reflect the signal received from the base station.
+Passive \ac{rfid} is widely utilized for a variety of applications owing to its multiple advantages, including low cost, reduced size, and ease of manufacture compared to active \ac{rfid}, which requires only a tag chip and an antenna.
+Passive \ac{rfid} is helpful for sub-meter detections and has a detection range of $10 m$\cite{deak2012survey}.
+
+% \section{Localization Detection Techniques}
+
+% \subsection{Proximity Based Technique}
+
+% \subsection{Scene Analysis}
+
+% \subsection{Triangulation}
+
+% \subsubsection{Lateration}
+
+% \subsubsection{Angulation}
+
+% \section{Localization Methods \& Algorithms}
+
+% \subsection{\acf{aoa} Measurements}
+
+% \subsection{\acf{toa} Measurements}
+
+% \subsection{\acf{rss}}
+
+% \subsection{Radio-Frequency Fingerprinting}
+
+\input{chapters/indoor/loc.meth.tech.tabl.tex}

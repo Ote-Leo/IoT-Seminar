@@ -1,0 +1,40 @@
+\begin{sidewaystable}
+    \tiny
+    \centering
+    \caption{Localization Techniques Performance Overview}
+    \begin{tabular}{ l l l l l l l l }
+        \hline
+        Technology     & Technique                  & Method    & Accuracy (m)   & Cost       & Coverage                & Pros                             & Cons                \\
+        \hline
+        Satellite      & Trilateration              & \ac{toa}  & $3-5$          &            & Floor level             & Lower power consumption          &                     \\
+                       &                            & TDOA      &                &            &                         &                                  &                     \\
+                       &                            &           &                &            &                         &                                  &                     \\
+        Inertial       & \ac{dr}                    & ---       & 2              & Low        & Floor level             & Cheap                            & Accumulative errors \\
+                       &                            &           &                &            &                         &                                  &                     \\
+        Magnetic based & Trilateration              & ---       & 2              & Low        & Floor level             & Cheap                            & Requires mapping    \\
+                       &                            &           &                &            &                         &                                  &                     \\
+        \ac{wifi}      & Proximity                  & \ac{ap}ID & 10 (proximity) & Low        & Floor level (around 35) & \multirow{6}{12em}{Good accuracy                       \\ Low cost \\ \ac{wifi} signal can penetrate \\ walls \\ No need for additional \\ infrastructure} & \multirow{4}{12em}{\ac{rf} interface with devices \\ operating at $2.4GHz$ \\ Fingerprinting requires a \\ huge effort} \\
+                       & Trilateration              & \ac{rss}  & $1-5$          &            &                         &                                  &                     \\
+                       & Angulation                 & \ac{toa}  &                &            &                         &                                  &                     \\
+                       & Fingerprinting             & TDOA      &                &            &                         &                                  &                     \\
+                       & \ac{rss}-Propagation Model & \ac{aoa}  &                &            &                         &                                  &                     \\
+                       &                            &           &                &            &                         &                                  &                     \\
+                       &                            &           &                &            &                         &                                  &                     \\
+        ZigBee         & Proximity                  & \ac{ap}ID & $3-5$          & Medium     & Floor level             & \multirow{2}{12em}{Low Cost                            \\ Low power consumption} &  Requires special equipment \\
+                       & Trilateration              & \ac{rss}  &                &            &                         &                                  &                     \\
+                       & Fingerprinting             &           &                &            &                         &                                  &                     \\
+                       & \ac{rss}-Propagation Model &           &                &            &                         &                                  &                     \\
+                       &                            &           &                &            &                         &                                  &                     \\
+        Bluetooth      & Proximity                  & \ac{ap}ID & $2-5$          & Low-Medium & around 10               & \multirow{3}{12em}{Good accuracy                       \\ No need for additional \\ infrastructure \\ Low power consumption} &  \multirow{3}{12em}{\ac{rf} interface \\ Limited coverage \\ and  mobility} \\
+                       & Trilateration              & \ac{rss}  &                &            &                         &                                  &                     \\
+                       & Fingerprinting             & \ac{toa}  &                &            &                         &                                  &                     \\
+                       &                            &           &                &            &                         &                                  &                     \\
+                       &                            &           &                &            &                         &                                  &                     \\
+        \ac{rfid}      & Proximity                  & \ac{ap}ID & $1-5$          & Low        & Room level              & \multirow{2}{12em}{Cheap                               \\ Realtime localization} &  \multirow{2}{12em}{Low accuracy \\ Response time is high} \\
+                       & Trilateration              & \ac{rss}  &                &            &                         &                                  &                     \\
+                       & Fingerprinting             &           &                &            &                         &                                  &                     \\
+                       & \ac{rss}-Propagation Model &           &                &            &                         &                                  &                     \\
+                       &                            &           &                &            &                         &                                  &                     \\
+        \hline
+    \end{tabular}
+\end{sidewaystable}
