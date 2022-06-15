@@ -7,6 +7,7 @@ and once the customer wants to find the location of a product, they can browse t
 Rather than handing out pamphlets to tourists at museums around the glob, roaming tourists may be managed by a Bluetooth and \ac{wifi}-enabled gadget.
 The gadget then directs visitors to a specific area of the gallery and provide information of an artefact.
 
+
 Bluetooth beacons can lead students to the locations of books in libraries.
 The student might use a mobile device to access his position to the network and recommend him.
 The precision of the position is within meters, ensuring that the scholar is close to the relevant book shelf\cite{hahn2017indoor}.
@@ -29,7 +30,7 @@ The basic idea is to receive the \ac{gps} signal and rebroadcast it via indoor t
 \ac{ins} is recognized by its precision and resource utilization given that the inertial sensor is mounted to the surface of the object.
 However, \ac{ins} may become vulnerable to distortion, necessitating the use of specialized filtering systems such as the Kalman filter\cite{hu2020improving}.
 Another disadvantage of employing \ac{ins} is the expense and effort required to build the location sensor's network infrastructure.
-A unique initial location estimation approach has been proposed in \cite{chen2016smartphone} by integrating current \ac{wifi} routers and iBeacons.
+A unique initial location estimation approach has been proposed in\cite{chen2016smartphone} by integrating current \ac{wifi} routers and iBeacons.
 
 \subsection{Magnetic Based Navigation}
 At low altitudes, magnetic-based technologies are used for localization.
@@ -44,10 +45,10 @@ these maps can estimate the position of an unknown target based on its magnetic 
 This method is known as magnetic fingerprinting.
 Magnetic interference, on the other hand, might be severe and produce localization issues.
 Using multiple handsets along the same routes may result in different magnetic readings being recorded.
-The authors of \cite{lee2018amid} investigated localization using deep learning;
+The authors of\cite{lee2018amid} investigated localization using deep learning;
 accuracy was determined to be $0.8 m$ in corridors and $2.3 m$ in the atrium.
 Cameras and magnetic fields are integrated with neural networks to improve localization when the phone is upright;
-their proposed techniques \cite{liu2016fusion} achieved more than 91\% percent accuracy increase of $1.34 m$.
+their proposed techniques\cite{liu2016fusion} achieved more than 91\% percent accuracy increase of $1.34 m$.
 
 \subsection{\acf{rf} Based Navigation}
 The most widely used techniques for localization are those based on radio frequencies.
@@ -86,7 +87,7 @@ ZigBee is a wireless mesh network protocol that allows for long-distance communi
 When compared to \ac{wifi} standards, it has a low cost, a modest data transmission rate, and a short latency time.
 The \ac{rss} technique is used by the technology to quantify the distance between two or more ZigBee sensor devices\cite{sugano2006indoor}.
 The scanning of \ac{ap}s via the \ac{wifi} interface consumes a lot of electricity.
-To mitigate this impact, the author in \cite{niu2015zil} proposed ZIL, an energy-efficient indoor localization utilizing ZigBee in which the ZigBee interface is utilized to gather \ac{wifi} signals.
+To mitigate this impact, the author in\cite{niu2015zil} proposed ZIL, an energy-efficient indoor localization utilizing ZigBee in which the ZigBee interface is utilized to gather \ac{wifi} signals.
 
 \subsubsection{Bluetooth}
 Bluetooth is created to encourage devices to communicate wirelessly across short distances.
@@ -94,7 +95,7 @@ Bluetooth uses radio waves with frequencies ranging from $2.402 GHz$ to $2.480 G
 If it has qualities such as low transmission power, battery life, secure and efficient communications, and an easily accessible solution.
 The new \ac{ble} can cover a range of $70-100 m$ and offer $24Mbps$ while using less power\cite{zafari2019survey}.
 As a result, Bluetooth is unsuitable for large-area localization.
-Using the \ac{rss} trained \ac{nn} trained in \cite{Altini2010BluetoothIL}, and they may be used to detect user location based on online \ac{rss} measurements.
+Using the \ac{rss} trained \ac{nn} trained in\cite{Altini2010BluetoothIL}, and they may be used to detect user location based on online \ac{rss} measurements.
 
 \subsubsection{\acf{rfid}}
 \acf{rfid} systems rely on \ac{rfid} tags' back-scattering communication, as well as \ac{rfid} readers and middleware to process the signal created between the tags and the readers\cite{tesoriero2010improving}.
@@ -107,26 +108,5 @@ Passive tags lack internal batteries and instead reflect the signal received fro
 Passive \ac{rfid} is widely utilized for a variety of applications owing to its multiple advantages, including low cost, reduced size, and ease of manufacture compared to active \ac{rfid}, which requires only a tag chip and an antenna.
 Passive \ac{rfid} is helpful for sub-meter detections and has a detection range of $10 m$\cite{deak2012survey}.
 
-% \section{Localization Detection Techniques}
-
-% \subsection{Proximity Based Technique}
-
-% \subsection{Scene Analysis}
-
-% \subsection{Triangulation}
-
-% \subsubsection{Lateration}
-
-% \subsubsection{Angulation}
-
-% \section{Localization Methods \& Algorithms}
-
-% \subsection{\acf{aoa} Measurements}
-
-% \subsection{\acf{toa} Measurements}
-
-% \subsection{\acf{rss}}
-
-% \subsection{Radio-Frequency Fingerprinting}
-
+% Comparison Table
 \input{chapters/indoor/loc.meth.tech.tabl.tex}
